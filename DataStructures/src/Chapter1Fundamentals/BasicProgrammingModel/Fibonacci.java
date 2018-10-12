@@ -1,6 +1,7 @@
 package Chapter1Fundamentals.BasicProgrammingModel;
 
 public class Fibonacci {
+	//starts wit 0
 	static int fibResursive(int n) {
 		if (n == 0)
 			return 0;
@@ -8,6 +9,13 @@ public class Fibonacci {
 			return 1;
 
 		return fibResursive(n - 1) + fibResursive(n - 2);
+	}
+	//starts with 1
+	static int fibKingsCollegeRecursive(int n) {
+		if(n==1) return 1;
+		if(n==2) return 2;
+		
+		return fibKingsCollegeRecursive(n-1) + fibKingsCollegeRecursive(n-2);
 	}
 
 	// fibonacci starts with 0
@@ -54,9 +62,10 @@ public class Fibonacci {
 	}
 
 	public static void main(String[] args) {
-		// System.out.println(fibResursive(7));
-		// System.out.println(fibIterative(2)); //starts with 0
-		//System.out.println(fibKingsCollegeIterative(3)); // with 1
-		 System.out.println(fibKingsCollegeIterative2(3)); //with 0
+		// System.out.println(fibResursive(4));
+		// System.out.println(fibIterative(4)); //starts with 0
+		System.out.println(fibKingsCollegeIterative(5)); // with 1
+		System.out.println(fibKingsCollegeRecursive(5)); //with 1
+		// System.out.println(fibKingsCollegeIterative2(3)); //with 0
 	}
 }

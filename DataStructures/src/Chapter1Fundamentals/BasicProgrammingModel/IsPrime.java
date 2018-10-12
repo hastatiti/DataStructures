@@ -12,9 +12,7 @@ public class IsPrime {
 		}
 		return true;
 	}
-
 	public static void main(String[] args) {
-		System.out.println(primeTest(2));
+		System.out.println(primeTest(11));
 	}
-
 }

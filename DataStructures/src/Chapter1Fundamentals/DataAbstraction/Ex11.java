@@ -23,10 +23,13 @@ public class Ex11 {
 		return year;
 	}
 
-	public static boolean isValidDate(int m, int d, int y) {
+	public static boolean isValidDate(int d, int m, int y) {
 		int[] days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		int[] leapDays = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		if(m < 1 || m > 12 || y < 1 || d < 1 || d > 31 || d > days[m-1]) return false;
+		if(m < 1 || m > 12 || y < 1 || d < 1 || d > 31 || d > days[m-1]) 
+			{throw new RuntimeException("invalid day");
+			}
+		System.out.println("valid date");
 		return true;
 	}
 	
@@ -44,7 +47,10 @@ public class Ex11 {
 	public String toString()
 	{return month() + "/" + day() + "/" + year();}
 	public static void main(String[] args) {
-		Ex11 date = new Ex11(40,40,40);
-		System.out.println(date);
+		//isValidDate(29,2,2011);
+		isValidDate(28,2,2011);
+		if(isLeapYear(2020)) {
+			System.out.println("It is leap year");
+		}else System.out.println("Not a leap year");
 	}
 }

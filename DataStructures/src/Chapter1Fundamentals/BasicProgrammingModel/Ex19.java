@@ -25,6 +25,6 @@ public class Ex19 {
 	public static void main(String[] args) {
 //		for (int N = 0; N < 100; N++)
 //			System.out.println(N + " " + F(N));
-		 System.out.println(fibonacci(30));
+		 System.out.println(fibonacci(100));
 	}
 }
