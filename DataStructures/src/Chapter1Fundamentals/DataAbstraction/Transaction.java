@@ -37,9 +37,24 @@ public class Transaction implements Comparable<Transaction>{
 		return 0;
 	}
 	
+	public boolean equals(Object anObject) {
+		if(anObject instanceof Transaction) {
+			Transaction t = (Transaction) anObject;
+			return ((who.equals(t.who) && when.equals(t.when) &&
+					amount == t.amount));
+		}else
+		return false;
+	}
 	
 	public static void main(String[] args) {
 		Transaction transaction = new Transaction("John", new Date(12,2,2000), 1200);
-		System.out.println(transaction);
+		Transaction transaction2 = new Transaction("John", new Date(12,2,2000), 1200);
+		Transaction transaction3 = new Transaction("Mark", new Date(7,7,2020), 770);
+		System.out.println("Transactions are :");
+		System.out.println(transaction + " and " + transaction2 +" and "+ transaction3);
+		System.out.println("Equals method check, expected true: ");
+		System.out.println(transaction.equals(transaction2));
+		System.out.println("Equals method check, expected false : ");
+		System.out.println(transaction.equals(transaction3));
 	}
 }
