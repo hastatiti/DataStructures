@@ -59,5 +59,4 @@ public class Ex14 {
 		System.out.println(resizingQueue.dequeue());
 		System.out.println(resizingQueue.dequeue());
 		}
-	
 }
