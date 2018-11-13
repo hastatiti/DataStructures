@@ -29,6 +29,7 @@ public class Ex16 {
 		long newDenominator = a2*b2;
 		return new Ex16(newNumerator,newDenominator);
 	}
+	
 	public Ex16 minus(Ex16 b) {
 		long a1 = this.numerator;
 		long a2 = this.denominator;
@@ -38,10 +39,12 @@ public class Ex16 {
 		long newDenominator = a2*b2;
 		return new Ex16(newNumerator,newDenominator);
 	}
+	
 	@Override
 	public String toString() {
 		return  numerator + "/" + denominator ;
 	}
+	
 	public static void main(String[] args) {
 		Ex16 rational = new Ex16(4,7);
 		System.out.println(rational.plus(new Ex16(5,2)));
