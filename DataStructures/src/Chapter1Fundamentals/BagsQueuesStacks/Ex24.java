@@ -90,6 +90,8 @@ public class Ex24<Item> implements Iterable<Item> {
 			}
 			Ex24<String>.Node n = list.addNode("b");
 			list.removeAfter(n);
+			//Instead of creating a Node separately
+//			list.removeAfter(list.addNode("b"));
 			for (String s : list) {
 				System.out.println(s);
 			}
