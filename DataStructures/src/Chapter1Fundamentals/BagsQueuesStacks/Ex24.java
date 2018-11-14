@@ -2,7 +2,7 @@ package Chapter1Fundamentals.BagsQueuesStacks;
 
 import java.util.Iterator;
 
-public class Ex21<Item> implements Iterable<Item> {
+public class Ex24<Item> implements Iterable<Item> {
 
 	 private Node first; // top of stack (most recently added node)
 	   private int N; 
@@ -20,6 +20,12 @@ public class Ex21<Item> implements Iterable<Item> {
 	      first.next = oldfirst;
 	      N++;
 	}
+	   public Node addNode(Item item) {
+		    Node n = new Node();
+		    n.item = item;
+		    return n;
+	   }
+	   
 	   public void removeLast() {
 		   if(N == 1 ) first = null;
 		   for (Node x = first; x != null; x = x.next) {
@@ -41,7 +47,15 @@ public class Ex21<Item> implements Iterable<Item> {
 		   }
 		   N--;
 	   }
-	   public static boolean find(Ex21<String> list,String key) {
+	   
+	   public void removeAfter(Node n) {
+		   for(Node x = first; x != null; x = x.next) {
+			   if(x.item == n.item) {
+				   x.next = x.next.next;
+			   }
+		   }
+	   }
+	   public static boolean find(Ex24<String> list,String key) {
 		   for(String s : list) {
 			   if(s == key) {
 				   return true;
@@ -66,12 +80,19 @@ public class Ex21<Item> implements Iterable<Item> {
 	   		}
 	   	}
 	   	public static void main(String[] args) {
-			Ex21<String> myList = new Ex21<String>();
-			myList.add("a");
-			myList.add("b");
-			myList.add("c");
-			myList.add("d");
-			System.out.println(find(myList,"b"));
-			System.out.println(find(myList,"e"));
+			Ex24<String> list = new Ex24<>();
+			list.add("d");
+			list.add("c");
+			list.add("b");
+			list.add("a");
+			for (String s : list) {
+				System.out.println(s);
+			}
+			Ex24<String>.Node n = list.addNode("b");
+			list.removeAfter(n);
+			for (String s : list) {
+				System.out.println(s);
+			}
 		}
+
 }
