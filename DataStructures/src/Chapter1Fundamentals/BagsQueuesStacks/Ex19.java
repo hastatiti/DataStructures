@@ -10,9 +10,10 @@ public class Ex19<Item> {
 		}
 	   public void removeLast() {
 		   for (Node x = first; x != null; x = x.next) {
-			   if(x.next == null) {
-				   x = null;
+			   if(x.next.next == null) {
+				   x.next = null;
 			   }
 		   }
+		   N--;
 	   }
 }
