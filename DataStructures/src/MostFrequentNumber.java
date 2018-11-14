@@ -6,24 +6,6 @@ public class MostFrequentNumber {
 		int maxValue = myArray[0];
 		int maxCounter = -1;
 
-		for (int element : myArray) {
-			if (current == element) {
-				counter++;
-			}
-			
-			else {
-				if (counter > maxCounter) {
-					maxCounter = counter;
-					maxValue = current;
-				}
-				counter = 0;
-				current = element;
-			}//end of else
-		} // end of for loop
-
-		if(counter > maxCounter) {
-			maxValue = current;
-		}
 		return maxValue;
 	}
 
