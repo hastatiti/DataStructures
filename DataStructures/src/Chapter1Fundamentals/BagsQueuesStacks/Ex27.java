@@ -2,9 +2,8 @@ package Chapter1Fundamentals.BagsQueuesStacks;
 
 import java.util.Iterator;
 
-public class Ex25<Item> implements Iterable<Item> {
-
-	 private Node first; // top of stack (most recently added node)
+public class Ex27<Item> implements Iterable<Item>  {
+	private Node first; // top of stack (most recently added node)
 	   private int N; 
 	   private class Node { // nested class to define nodes
 			Item item;
@@ -63,7 +62,28 @@ public class Ex25<Item> implements Iterable<Item> {
 			   }
 		   }N++;
 	   }
-	   public static boolean find(Ex25<String> list,String key) {
+	   public void remove(Ex27<String> list,String key) {
+		   int counter =0;
+		   for(String s : list) {
+			   counter++;
+			   if(s == key) {
+				   delete(counter);
+			   }
+		   }
+	   }
+	   
+	   public int max() {
+		   int max = (int) first.item;
+		   int current ;
+		   for(Node x = first; x != null; x = x.next) {
+			   current = (int) x.item; 
+			   if(current > max) {
+				   max = current;
+			   }
+		   }
+		   return max;
+	   }
+	   public static boolean find(Ex27<String> list,String key) {
 		   for(String s : list) {
 			   if(s == key) {
 				   return true;
@@ -89,22 +109,11 @@ public class Ex25<Item> implements Iterable<Item> {
 	   	}
 
 	public static void main(String[] args) {
-		Ex25<String> list = new Ex25<>();
-		list.add("d");
-		list.add("c");
-		list.add("b");
-		list.add("a");
-		for(String s : list) {
-			System.out.println(s);
-		}
-		Ex25<String>.Node n1 = list.addNode("b") ;
-		Ex25<String>.Node n2 = list.addNode("x");
-		
-		list.insertAfter(n1,n2);
-		
-		System.out.println("Node 'x' inserted after 'node b' --------------->");
-		for(String s : list) {
-			System.out.println(s);
-		}
+		Ex27<Integer> list = new Ex27<>();
+		list.add(3);
+		list.add(31);
+		list.add(2);
+		list.add(4);
+		System.out.println("max is : " + list.max());
 	}
 }
