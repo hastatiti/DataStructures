@@ -2,7 +2,7 @@ package Chapter1Fundamentals.BagsQueuesStacks;
 
 import java.util.Iterator;
 
-public class Ex24<Item> implements Iterable<Item> {
+public class Ex25<Item> implements Iterable<Item> {
 
 	 private Node first; // top of stack (most recently added node)
 	   private int N; 
@@ -53,7 +53,15 @@ public class Ex24<Item> implements Iterable<Item> {
 			   if(x.item == n.item) {
 				   x.next = x.next.next;
 			   }
-		   }
+		   }N--;
+	   }
+	   public void insertAfter(Node n1, Node n2) {
+		   for(Node x = first; x != null; x = x.next) {
+			   if(x.item == n1.item) {
+				   n2.next = x.next;
+				   x.next = n2;
+			   }
+		   }N++;
 	   }
 	   public static boolean find(Ex24<String> list,String key) {
 		   for(String s : list) {
@@ -79,24 +87,24 @@ public class Ex24<Item> implements Iterable<Item> {
 	   			return item;
 	   		}
 	   	}
-	   	public static void main(String[] args) {
-			Ex24<String> list = new Ex24<>();
-			list.add("d");
-			list.add("c");
-			list.add("b");
-			list.add("a");
-			System.out.println("List before------>");
-			for (String s : list) {
-				System.out.println(s);
-			}
-			Ex24<String>.Node n = list.addNode("b");
-			System.out.println("List following 'node b' removed ------->");
-			list.removeAfter(n);
-			//Instead of creating a Node separately
-//			list.removeAfter(list.addNode("b"));
-			for (String s : list) {
-				System.out.println(s);
-			}
-		}
 
+	public static void main(String[] args) {
+		Ex25<String> list = new Ex25<>();
+		list.add("d");
+		list.add("c");
+		list.add("b");
+		list.add("a");
+		for(String s : list) {
+			System.out.println(s);
+		}
+		Ex25<String>.Node n1 = list.addNode("b") ;
+		Ex25<String>.Node n2 = list.addNode("x");
+		
+		list.insertAfter(n1,n2);
+		
+		System.out.println("Node 'x' inserted after 'node b' --------------->");
+		for(String s : list) {
+			System.out.println(s);
+		}
+	}
 }
