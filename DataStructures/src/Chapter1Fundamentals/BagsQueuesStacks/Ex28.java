@@ -2,7 +2,7 @@ package Chapter1Fundamentals.BagsQueuesStacks;
 
 import java.util.Iterator;
 
-public class Ex27<Item> implements Iterable<Item>  {
+public class Ex28<Item> implements Iterable<Item> {
 	private Node first; // top of stack (most recently added node)
 	   private int N; 
 	   private class Node { // nested class to define nodes
@@ -62,7 +62,7 @@ public class Ex27<Item> implements Iterable<Item>  {
 			   }
 		   }N++;
 	   }
-	   public void remove(Ex27<String> list,String key) {
+	   public void remove(Ex28<String> list,String key) {
 		   int counter =0;
 		   for(String s : list) {
 			   counter++;
@@ -72,19 +72,34 @@ public class Ex27<Item> implements Iterable<Item>  {
 		   }
 	   }
 	   
+//	   public int max() {
+//		   int max = (int) first.item;
+//		   int current ;
+//		   for(Node x = first; x != null; x = x.next) {
+//			   current = (int) x.item; 
+//			   if(current > max) {
+//				   max = current;
+//			   }
+//		   }
+//		   return max;
+//	   }
+	   //Recursive max
 	   public int max() {
-		   int max = (int) first.item;
-		   int current ;
-		   for(Node x = first; x != null; x = x.next) {
-			   current = (int) x.item; 
-			   if(current > max) {
-				   max = current;
-			   }
-		   }
-		   return max;
+		   if(first == null)
+			   return 0;
+		   int max = (int) first.next.item;
+		   return max(first , max);
 	   }
-	  
-	   public static boolean find(Ex27<String> list,String key) {
+	   public int max(Node node, int max) {
+		   //base case
+		   if(node == null)
+			   return max;
+		   if((int)node.item > max) {
+			   max = (int)node.item;}
+		return max(node.next , max) ;
+	   }
+	   
+	   public static boolean find(Ex28<String> list,String key) {
 		   for(String s : list) {
 			   if(s == key) {
 				   return true;
@@ -110,11 +125,11 @@ public class Ex27<Item> implements Iterable<Item>  {
 	   	}
 
 	public static void main(String[] args) {
-		Ex27<Integer> list = new Ex27<>();
-		list.add(3);
-		list.add(31);
-		list.add(2);
-		list.add(4);
+		Ex28<Integer> list = new Ex28<>();
+		list.add(5);
+		list.add(33);
+		list.add(21);
+		list.add(10);
 		System.out.println("max is : " + list.max());
 	}
 }
