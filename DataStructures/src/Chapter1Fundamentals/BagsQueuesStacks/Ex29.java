@@ -62,5 +62,8 @@ public class Ex29<Item> implements Iterable<Item> {
 		q.enqueue("b");
 		q.enqueue("c");
 		q.enqueue("d");
+		for(String s : q) {
+			System.out.println(s);
+		}
 	}
 }
