@@ -108,18 +108,27 @@ public class Ex30<Item> implements Iterable<Item> {
 		   }
 		   return false;
 	   }
-	   
-	public Node reverse() {
-		Node reverse = null;
-		while (first != null) {
-			Node second = first.next;
-			first.next = reverse;
-			reverse = first;
-			first = second;
-		}
-		first = reverse;
-		return reverse;
-	}
+	   public Node reverse() {
+		   if(first != null) {
+		   Node second = first.next;
+		   Node third = first.next.next;
+		   first = second;
+		   second = third;
+		   third = second.next;
+		return third;}
+		return first;
+	   }
+//	public Node reverse() {
+//		Node reverse = null;
+//		while (first != null) {
+//			Node second = first.next;
+//			first.next = reverse;
+//			reverse = first;
+//			first = second;
+//		}
+//		first = reverse;
+//		return reverse;
+//	}
 	   @Override
 	   public Iterator<Item> iterator() {
 	   	return new ListIterator();
