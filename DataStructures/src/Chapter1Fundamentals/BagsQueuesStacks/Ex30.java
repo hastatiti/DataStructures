@@ -117,6 +117,7 @@ public class Ex30<Item> implements Iterable<Item> {
 			reverse = first;
 			first = second;
 		}
+		first = reverse;
 		return reverse;
 	}
 	   @Override
@@ -138,11 +139,15 @@ public class Ex30<Item> implements Iterable<Item> {
 
 	public static void main(String[] args) {
 		Ex30<Integer> list = new Ex30<>();
-		list.add(5);
-		list.add(33);
-		list.add(21);
-		list.add(13);
+		list.add(4);
+		list.add(3);
+		list.add(2);
+		list.add(1);
+		for(Integer i : list) {
+			System.out.println(i);
+		}
 		list.reverse();
+		System.out.println("After reversing :");
 		for(Integer i : list) {
 			System.out.println(i);
 		}
