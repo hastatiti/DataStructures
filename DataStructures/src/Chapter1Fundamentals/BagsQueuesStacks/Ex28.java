@@ -83,11 +83,12 @@ public class Ex28<Item> implements Iterable<Item> {
 //		   }
 //		   return max;
 //	   }
+	   
 	   //Recursive max
 	   public int max() {
 		   if(first == null)
 			   return 0;
-		   int max = (int) first.next.item;
+		   int max = (int) first.item;
 		   return max(first , max);
 	   }
 	   public int max(Node node, int max) {
@@ -129,7 +130,7 @@ public class Ex28<Item> implements Iterable<Item> {
 		list.add(5);
 		list.add(33);
 		list.add(21);
-		list.add(10);
+		list.add(13);
 		System.out.println("max is : " + list.max());
 	}
 }
