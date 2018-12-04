@@ -109,14 +109,14 @@ public class Ex30<Item> implements Iterable<Item> {
 		   return false;
 	   }
 	   public Node reverse() {
-		   if(first != null) {
+		   Node third = null;
+		   while (first != null) {
 		   Node second = first.next;
-		   Node third = first.next.next;
+		   third = first.next.next;
 		   first = second;
 		   second = third;
-		   third = second.next;
-		return third;}
-		return first;
+		   third = second.next.next;}
+		return third;
 	   }
 //	public Node reverse() {
 //		Node reverse = null;
