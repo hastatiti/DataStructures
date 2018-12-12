@@ -15,7 +15,16 @@ h  i  j		0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 4  19 7		E A E L L H E O S Q I  R  T  S  O  S  Y  T  U  S  N
 4  20 8		E A E L L H E O N Q I  R  S  S  O  S  T  T  U  S  Y
 
-1-sort
+1-sort		E A E L L H E O N Q I  R  S  S  O  S  T  T  U  S  Y
+h  i  j		0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20		
+1  1  0		A E E L L H E O N Q I  R  S  S  O  S  T  T  U  S  Y
+1  5  3		A E E H L L E O N Q I  R  S  S  O  S  T  T  U  S  Y
+1  6  3		A E E E H L L O N Q I  R  S  S  O  S  T  T  U  S  Y
+1  8  7		A E E E H L L N O Q I  R  S  S  O  S  T  T  U  S  Y
+1  10 5		A E E E H I L L N O Q  R  S  S  O  S  T  T  U  S  Y
+1  14 10	A E E E H I L L N O O  Q  R  S  S  S  T  T  U  S  Y
+1  19 16	A E E E H I L L N O O  Q  R  S  S  S  S  T  T  U  Y
+
 
 
 
