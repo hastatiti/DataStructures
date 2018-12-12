@@ -7,4 +7,7 @@ h  i  j		0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 			0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 4-sort		E A E S S H E L L S O  R  T  Q  U  S  Y  T  I  O  N
 h  i  j		
-4  7  3
+4  7  3		E A E L S H E E L S O  R  T  Q  U  S  Y  T  I  O  N
+4  8  4		E A E L L H E E S S O  R  T  Q  U  S  Y  T  I  O  N
+4  13 9		E A E L L H E E S Q O  R  T  S  U  S  Y  T  I  O  N
+4  18 14	E A E L L H E E S Q O  R  T  S  I  S  Y  T  U  O  N
