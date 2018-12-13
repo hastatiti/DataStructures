@@ -3,7 +3,7 @@ package Chapter2Sorting.ElementarySorts;
 public class Transaction implements Comparable<Transaction> {
 	String who;
 	Date when;
-	double amount;
+	private final double amount;
 
 	public Transaction(String who, Date when, double amount) {
 		super();
