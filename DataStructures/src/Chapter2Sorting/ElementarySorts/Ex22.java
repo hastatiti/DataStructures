@@ -3,7 +3,7 @@ package Chapter2Sorting.ElementarySorts;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SortTransactions {
+public class Ex22 {
 	public static Transaction[] readTransactions() {
 		Scanner in = new Scanner(System.in);
 			Transaction[] t = new Transaction[3];
