@@ -44,5 +44,4 @@ public class Transaction implements Comparable<Transaction> {
 		} else
 			return false;
 	}
-
 }
