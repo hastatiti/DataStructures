@@ -1,5 +1,7 @@
 package Chapter2Sorting.ElementarySorts;
 
+import java.util.Arrays;
+
 public class Ex24 {
 	 private static boolean less(Comparable v, Comparable w)
      {  return v.compareTo(w) < 0;  }
@@ -16,6 +18,25 @@ public class Ex24 {
            if (less(a[i], a[i-1]))  return false;
         return true;
      }
+     //Find minimum in array
+     public static void findMin(Comparable[] a) {
+    	 int N = a.length;
+    	 Comparable min = a[0] ;
+    	 Comparable temp; 
+    	 int index = 0;
+         for (int i = 1; i < N; i++) {
+        	 if( a[i].compareTo(min) < 0) {
+        		 min = a[i];
+        		 index = i;
+        	 }
+         }
+         for (int i = 0; i < N; i++) {
+        	 temp = a[index];
+        	 a[index] = a[0];
+        	 a[0] = temp;
+         }
+         System.out.println(Arrays.toString(a));
+     }
      //Insertion Sort 
      public static void sort(Comparable[] a)
      {  // Sort a[] into increasing order.
@@ -25,4 +46,10 @@ public class Ex24 {
            for (int j = i; j > 0 && less(a[j], a[j-1]); j--)
               exch(a, j, j-1);
 } }
+     public static void main(String[] args) {
+		String [] a = {"e","x","z","a","h","f"};
+		findMin(a);
+//		sort(a);
+//		show(a);
+	}
 }
