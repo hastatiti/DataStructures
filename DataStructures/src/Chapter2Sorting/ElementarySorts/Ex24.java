@@ -30,11 +30,9 @@ public class Ex24 {
         		 index = i;
         	 }
          }
-         for (int i = 0; i < N; i++) {
         	 temp = a[index];
         	 a[index] = a[0];
         	 a[0] = temp;
-         }
          System.out.println(Arrays.toString(a));
      }
      //Insertion Sort 
@@ -49,7 +47,7 @@ public class Ex24 {
      public static void main(String[] args) {
 		String [] a = {"e","x","z","a","h","f"};
 		findMin(a);
-//		sort(a);
-//		show(a);
+		sort(a);
+		show(a);
 	}
 }
