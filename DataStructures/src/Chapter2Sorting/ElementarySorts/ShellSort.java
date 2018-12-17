@@ -1,4 +1,4 @@
-package Chapter2Sorting.ElementarySorts;
+ package Chapter2Sorting.ElementarySorts;
 
 public class ShellSort {
 	 private static boolean less(Comparable v, Comparable w)
