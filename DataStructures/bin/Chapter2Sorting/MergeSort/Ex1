@@ -4,5 +4,13 @@ i	j	0 1 2 3 4 5 || 6 7 8 9 10 11	0 1 2 3 4 5 || 6 7 8 9 10 11
 0	6	
 1	6	A E Q S U Y || E I N O S  T		A 
 2	6	  E Q S U Y || E I N O S  T		A E
-3	6	    Q S U Y || E I N O S  T	
-			
+2	7	    Q S U Y || E I N O S  T	    A E E
+2	8	    Q S U Y ||   I N O S  T		A E E I
+2	9	    Q S U Y ||     N O S  T		A E E I N		
+2  10	    Q S U Y ||       O S  T		A E E I N O
+3  10	    Q S U Y ||         S  T		A E E I N O Q
+4  10	      S U Y ||         S  T		A E E I N O Q || S
+4  11	        U Y ||         S  T		A E E I N O Q || S S
+4  12	        U Y ||            T		A E E I N O Q || S S T
+5  12	          Y ||            		A E E I N O Q || S S T U
+6  12	            ||            		A E E I N O Q || S S T U Y
