@@ -1,0 +1,18 @@
+				0 1 2 3 4 5 || 6 7 8 9 10 11 
+				E A S Y Q U || E S T I O  N
+merge(0,0,1)    A E S Y Q U || E S T I O  N		
+merge(1,1,2)	A E S Y Q U || E S T I O  N	
+ merge(0,1,2)	A E S Y Q U || E S T I O  N	
+merge(3,3,4)	A E S Q Y U || E S T I O  N	
+merge(4,4,5)	A E S Q U Y || E S T I O  N	
+ merge(3,4,5)	A E Q S U Y || E S T I O  N	
+  merge(0,2,5)	
+merge(6,7,7)	A E Q S U Y || E S T I O  N	
+merge(7,7,8)	A E Q S U Y || E S T I O  N	
+ merge(6,7,8)	A E Q S U Y || E S T I O  N	
+merge(9,9,10)	A E Q S U Y || E S T I O  N
+merge(10,10,11)	A E Q S U Y || E S T I N  O
+ merge(9,10,11) A E Q S U Y || E S T I N  O
+  merge(6,8,11) A E Q S U Y || E I N O S  T 
+   merge(0,5,11)A E E I N O || Q S S T U  Y
+ 
