@@ -12,6 +12,7 @@ public class Ex20<Item> implements Iterable<Item> {
 		}
 	   public int size()        {  return N; }
 	   public boolean isEmpty() {  return first == null; }
+	  
 	   public void add(Item item)
 	   {  // Add item to top of LinkedList.
 	      Node oldfirst = first;
