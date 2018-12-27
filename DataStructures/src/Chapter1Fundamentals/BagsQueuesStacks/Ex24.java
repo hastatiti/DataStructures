@@ -35,18 +35,21 @@ public class Ex24<Item> implements Iterable<Item> {
 		   }
 		   N--;
 	   }
-	   public void delete(int k) {
-		   if(k > N || isEmpty()) throw new RuntimeException("LinkedList is too small");
-		   int count = 0;
-		   if(k==1) first = first.next;
-		   for (Node x = first; x != null; x = x.next) {
-			   count++;
-			   if(count == k-1) {
-				   x.next = x.next.next;
-			   }
-		   }
-		   N--;
-	   }
+
+	public void delete(int k) {
+		if (k > N || isEmpty())
+			throw new RuntimeException("LinkedList is too small");
+		int count = 0;
+		if (k == 1)
+			first = first.next;
+		for (Node x = first; x != null; x = x.next) {
+			count++;
+			if (count == k - 1) {
+				x.next = x.next.next;
+			}
+		}
+		N--;
+	}
 	   
 	   public void removeAfter(Node n) {
 		   for(Node x = first; x != null; x = x.next) {
