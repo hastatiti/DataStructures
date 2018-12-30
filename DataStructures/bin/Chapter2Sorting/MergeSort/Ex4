@@ -1,0 +1,9 @@
+Yes, it check elements one by one, which is not aware 
+of other elements. So it can easily be :
+			D A C | A A A
+			D A C |   A A
+A			D A C |     A
+A A			D A C |
+A A A D	
+A A A D A
+A A A D A C	
