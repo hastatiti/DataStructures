@@ -1,7 +1,7 @@
 package Chapter2Sorting.MergeSort;
 
 public class MergeSort extends GeneralSort {
-	private static Comparable[] aux; 
+	public static Comparable[] aux; 
 	 public static void merge(Comparable[] a, int lo, int mid, int hi)
 	  {  // Merge a[lo..mid] with a[mid+1..hi].
 	     int i = lo, j = mid+1;
@@ -18,7 +18,7 @@ public class MergeSort extends GeneralSort {
         aux = new Comparable[a.length];    // Allocate space just once.
         sort(a, 0, a.length - 1);
      }
-	 private static void sort(Comparable[] a, int lo, int hi)
+	 public static void sort(Comparable[] a, int lo, int hi)
      {  // Sort a[lo..hi].
         if (hi <= lo) return;
         int mid = lo + (hi - lo)/2;
