@@ -3,6 +3,10 @@ package QuickSort;
 import Chapter2Sorting.MergeSort.GeneralSort;
 
 public class QuickSort extends GeneralSort{
+	 public static void sort(Comparable[] a)
+     {
+        sort(a, 0, a.length - 1);
+     }
 	private static void sort(Comparable[] a, int lo, int hi)
     {
        if (hi <= lo) return;
@@ -24,4 +28,11 @@ public class QuickSort extends GeneralSort{
 	     exch(a, lo, j);
 	     return j;
 	  }
+	public static void main(String[] args) {
+		String [] a = {"E", "A", "S", "Y", "Q", "U", "E", "S", "T", "I", "O",  "N"};
+		sort(a);
+		for(String b : a) {
+			System.out.print(b + " ");
+		}
+	}
 }
