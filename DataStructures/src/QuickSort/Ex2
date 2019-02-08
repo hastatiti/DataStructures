@@ -1,0 +1,50 @@
+lo 	j	hi		0 1 2 3 4 5 6 7 8 9 10 11 
+				E A S Y Q U E S T I O  N
+0	2	11		E A E Y Q U S S T I O  N
+0	1	1		A E E Y Q U S S T I O  N
+3	x	11
+partition x
+i	j			3 4 5 6 7 8 9 10 11	
+3	12			Y Q U S S T I O  N
+11	11			N Q U S S T I O  Y
+-----
+lo 	j	hi		0 1 2 3 4 5 6 7 8 9 10 11 
+3	11	11		A E E N Q U S S T I O  Y
+3	x	10
+partition x		
+i	j			3 4 5 6 7 8 9 10 
+3	11			N Q U S S T I O 
+4	9			N I U S S T Q O
+5	4			I N U S S T Q O
+----
+lo 	j	hi		0 1 2 3 4 5 6 7 8 9 10 11 
+3	4	10		A E E I N U S S T Q O  Y
+5	x	10
+partition x
+i	j			5 6 7 8 9 10
+5	11			U S S T Q O
+10	10			O S S T Q U
+----
+lo 	j	hi		0 1 2 3 4 5 6 7 8 9 10 11 
+5	10 10		A E E I N O S S T Q U  Y
+5	x	9
+partition x
+i	j			5 6 7 8 9
+5 	10			O S S T Q
+6	5			O S S T Q
+----
+lo 	j	hi		0 1 2 3 4 5 6 7 8 9 10 11 
+5	5	9		A E E I N O S S T Q U  Y
+6	x	9
+partition x
+i	j			6 7 8 9 
+6 	10			S S T Q
+7	9			S Q T S
+8	7			Q S T S
+----
+lo 	j	hi		0 1 2 3 4 5 6 7 8 9 10 11
+6	7	9		A E E I N O Q S T S U  Y
+8	8	9		A E E I N O Q S S T U  Y
+
+
+
